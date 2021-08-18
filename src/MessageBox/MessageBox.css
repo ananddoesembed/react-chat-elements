@@ -205,7 +205,6 @@
     font-size: 12px;
     position: absolute;
     right: -4px;
-    bottom: -5px;
 }
 
 .rce-mbox-time.non-copiable:before {
@@ -233,7 +232,7 @@
 }
 
 .rce-mbox.rce-mbox--clear-notch {
-    border-radius: 5px 5px 5px 5px !important;
+    border-radius: 5px 5px 5px 5px;
 }
 
 .rce-mbox-right-notch {
@@ -291,6 +290,7 @@
     cursor: pointer;
     display: flex;
     align-items: center;
+    position: relative;
 }
 
 .rce-mbox-title:hover {

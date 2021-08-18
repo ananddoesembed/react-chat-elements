@@ -143,6 +143,47 @@ export class MessageBox extends React.PureComponent {
                                             this.props.title &&
                                             <span>{this.props.title}</span>
                                         }
+                                      {!this.props.below?<div style={{bottom:'-15px'}}
+                                    className={classNames(
+                                        'rce-mbox-time',
+                                        { 'rce-mbox-time-block': thatAbsoluteTime },
+                                        { 'non-copiable': !this.props.copiableDate },
+                                    )}
+                                    data-text={this.props.copiableDate ? undefined : dateText}>
+                                    {
+                                        this.props.copiableDate &&
+                                        this.props.date &&
+                                        !isNaN(this.props.date) &&
+                                        (
+                                            this.props.dateString ||
+                                            format(this.props.date)
+                                        )
+                                    }
+                                    {
+                                        this.props.status &&
+                                        <span className='rce-mbox-status'>
+                                            {
+                                                this.props.status === 'waiting' &&
+                                                <MdIosTime />
+                                            }
+
+                                            {
+                                                this.props.status === 'sent' &&
+                                                <MdCheck />
+                                            }
+
+                                            {
+                                                this.props.status === 'received' &&
+                                                <IoDoneAll />
+                                            }
+
+                                            {
+                                                this.props.status === 'read' &&
+                                                <IoDoneAll color='#4FC3F7'/>
+                                            }
+                                        </span>
+                                    }
+                                </div>:null}
                                     </div>
                                 }
 
@@ -258,7 +299,8 @@ export class MessageBox extends React.PureComponent {
                                         text={this.props.text} />
                                 }
 
-                                <div
+                                {this.props.below?<div
+                                style={{bottom:'-5px'}}
                                     className={classNames(
                                         'rce-mbox-time',
                                         { 'rce-mbox-time-block': thatAbsoluteTime },
@@ -298,7 +340,7 @@ export class MessageBox extends React.PureComponent {
                                             }
                                         </span>
                                     }
-                                </div>
+                                </div>:null}
                             </div>
 
                             {
@@ -336,6 +378,7 @@ export class MessageBox extends React.PureComponent {
 }
 
 MessageBox.defaultProps = {
+    below:false,
     position: 'left',
     type: 'text',
     text: '',
