@@ -28,12 +28,12 @@ render(){
             <div className='container'>
                 <div
                     className='chat-list'>
-                    
+
                 <div
                     className='right-panel'>
-                    <MessageBox type={"text"} text={"hi"} notch={false} title={"ji"} below={false}/>
+                    <MessageBox type={"text"} style={{background:'blue'}} text={"hi"} notch={false} title={"ji"} below={false}/>
 
-                   
+                        <Button background={'red'} />
                 </div>
             </div>
             </div>

@@ -30,6 +30,7 @@ import classNames from 'classnames';
 
 export class MessageBox extends React.PureComponent {
     UNSAFE_componentWillReceiveProps(nextProps) {
+        console.log(this.props.style)
         if (nextProps.focus !== this.props.focus && nextProps.focus === true) {
             if (this.refs['message']) {
                 this.refs['message'].scrollIntoView({
@@ -68,10 +69,11 @@ export class MessageBox extends React.PureComponent {
                         <div
                             className={classNames(
                                 positionCls,
+
                                 {'rce-mbox--clear-padding': thatAbsoluteTime},
                                 {'rce-mbox--clear-notch': !this.props.notch},
                                 { 'message-focus': this.props.focus},
-                            )}>
+                            )} style={this.props.style}>
                             <div
                                 className='rce-mbox-body'
                                 onContextMenu={this.props.onContextMenu}>
@@ -407,6 +409,7 @@ MessageBox.defaultProps = {
     onContextMenu: null,
     focus: false,
     onMessageFocused: null,
+    style:{background:'red'}
 };
 
 
