@@ -145,7 +145,7 @@ export class MessageBox extends React.PureComponent {
                                             this.props.title &&
                                             <span>{this.props.title}</span>
                                         }
-                                      {!this.props.below?<div style={{bottom:'-27px'}}
+                                      {!this.props.below?<div style={{bottom:'-22px'}}
                                     className={classNames(
                                         'rce-mbox-time',
                                         { 'rce-mbox-time-block': thatAbsoluteTime },
@@ -302,7 +302,7 @@ export class MessageBox extends React.PureComponent {
                                 }
 
                                 {this.props.below?<div
-                                style={{bottom:'-27px'}}
+                                style={{bottom:'-22px'}}
                                     className={classNames(
                                         'rce-mbox-time',
                                         { 'rce-mbox-time-block': thatAbsoluteTime },
