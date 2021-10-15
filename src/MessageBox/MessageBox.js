@@ -145,21 +145,22 @@ export class MessageBox extends React.PureComponent {
                                             this.props.title &&
                                             <span>{this.props.title}</span>
                                         }
-                                      {!this.props.below?<div style={{bottom:'-15px'}}
+                                      {!this.props.below?<div style={{bottom:'-27px'}}
                                     className={classNames(
                                         'rce-mbox-time',
                                         { 'rce-mbox-time-block': thatAbsoluteTime },
                                         { 'non-copiable': !this.props.copiableDate },
                                     )}
-                                    data-text={this.props.copiableDate ? undefined : dateText}>
+                                    >
                                     {
-                                        this.props.copiableDate &&
-                                        this.props.date &&
-                                        !isNaN(this.props.date) &&
-                                        (
-                                            this.props.dateString ||
-                                            format(this.props.date)
-                                        )
+                                        // this.props.copiableDate &&
+                                        // this.props.date &&
+                                        // !isNaN(this.props.date) &&
+                                        // (
+                                        //     this.props.dateString ||
+                                        //     format(this.props.date)
+                                        // )
+                                        this.props.date
                                     }
                                     {
                                         this.props.status &&
@@ -201,7 +202,7 @@ export class MessageBox extends React.PureComponent {
 
                                 {
                                     this.props.type === 'text' &&
-                                    <div className={classNames('rce-mbox-text', {
+                                    <div className={classNames(`ce-mbox-text ${this.props.titleColor}`, {
                                         'rce-mbox-text-retracted': this.props.retracted,
                                         'left': this.props.position === 'left',
                                         'right': this.props.position === 'right',
@@ -308,15 +309,16 @@ export class MessageBox extends React.PureComponent {
                                         { 'rce-mbox-time-block': thatAbsoluteTime },
                                         { 'non-copiable': !this.props.copiableDate },
                                     )}
-                                    data-text={this.props.copiableDate ? undefined : dateText}>
+                                   >
                                     {
-                                        this.props.copiableDate &&
-                                        this.props.date &&
-                                        !isNaN(this.props.date) &&
-                                        (
-                                            this.props.dateString ||
-                                            format(this.props.date)
-                                        )
+                                        // this.props.copiableDate &&
+                                        // this.props.date &&
+                                        // !isNaN(this.props.date) &&
+                                        // (
+                                        //     this.props.dateString ||
+                                        //     format(this.props.date)
+                                        // )
+                                        this.props.date
                                     }
                                     {
                                         this.props.status &&
