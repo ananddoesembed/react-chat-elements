@@ -31,8 +31,8 @@ render(){
 
                 <div
                     className='right-panel'>
-                    <MessageBox type={"text"} style={{background:'blue'}} text={"hi"} notch={false} title={"ji"} below={true} date={"20-12-1994"}/>
-                    <MessageBox type={"text"} style={{background:'blue'}} text={"hi"} notch={false} title={"ji"} below={true} date={new Date().getTime()}/> <MessageBox type={"text"} style={{background:'blue'}} text={"hi"} notch={false} title={"ji"}  date={"123"}/>
+                    <MessageBox type={"text"} style={{background:'blue'}} text={"hi"} notch={false} title={"ji"} below={false} date={"20-12-1994"}/>
+                    <MessageBox type={"text"} style={{background:'blue'}} text={"hi"} notch={false} title={"ji"} below={false} date={new Date().getTime()}/> <MessageBox type={"text"} style={{background:'blue'}} text={"hi"} notch={false} title={"ji"}  date={"123"}/>
 
                         <Button background={'red'} />
                 </div>
