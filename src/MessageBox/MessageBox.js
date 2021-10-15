@@ -151,15 +151,16 @@ export class MessageBox extends React.PureComponent {
                                         { 'rce-mbox-time-block': thatAbsoluteTime },
                                         { 'non-copiable': !this.props.copiableDate },
                                     )}
-                                    data-text={this.props.copiableDate ? undefined : dateText}>
+                                    >
                                     {
-                                        this.props.copiableDate &&
-                                        this.props.date &&
-                                        !isNaN(this.props.date) &&
-                                        (
-                                            this.props.dateString ||
-                                            format(this.props.date)
-                                        )
+                                        // this.props.copiableDate &&
+                                        // this.props.date &&
+                                        // !isNaN(this.props.date) &&
+                                        // (
+                                        //     this.props.dateString ||
+                                        //     format(this.props.date)
+                                        // )
+                                        this.props.date
                                     }
                                     {
                                         this.props.status &&
@@ -308,15 +309,16 @@ export class MessageBox extends React.PureComponent {
                                         { 'rce-mbox-time-block': thatAbsoluteTime },
                                         { 'non-copiable': !this.props.copiableDate },
                                     )}
-                                    data-text={this.props.copiableDate ? undefined : dateText}>
+                                   >
                                     {
-                                        this.props.copiableDate &&
-                                        this.props.date &&
-                                        !isNaN(this.props.date) &&
-                                        (
-                                            this.props.dateString ||
-                                            format(this.props.date)
-                                        )
+                                        // this.props.copiableDate &&
+                                        // this.props.date &&
+                                        // !isNaN(this.props.date) &&
+                                        // (
+                                        //     this.props.dateString ||
+                                        //     format(this.props.date)
+                                        // )
+                                        this.props.date
                                     }
                                     {
                                         this.props.status &&
