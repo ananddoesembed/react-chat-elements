@@ -302,7 +302,7 @@ export class MessageBox extends React.PureComponent {
                                 }
 
                                 {this.props.below?<div
-                                style={{bottom:'-5px'}}
+                                style={{bottom:'-27px'}}
                                     className={classNames(
                                         'rce-mbox-time',
                                         { 'rce-mbox-time-block': thatAbsoluteTime },
