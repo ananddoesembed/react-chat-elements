@@ -47,10 +47,7 @@ export class MessageBox extends React.PureComponent {
         var positionCls = classNames('rce-mbox', { 'rce-mbox-right': this.props.position === 'right' });
         var thatAbsoluteTime = !/(text|video|file|meeting|audio)/g.test(this.props.type) && !(this.props.type === 'location' && this.props.text);
 
-        const dateText = this.props.date && !isNaN(this.props.date) && (
-            this.props.dateString ||
-            format(this.props.date)
-        );
+        const dateText = this.props.dateString 
 
         return (
             <div
@@ -143,7 +140,7 @@ export class MessageBox extends React.PureComponent {
                                         }
                                         {
                                             this.props.title &&
-                                            <span>{this.props.title}</span>
+                                            <span style={{width:'100%'}}>{this.props.title}</span>
                                         }
                                       {!this.props.below?<div style={{bottom:'-22px'}}
                                     className={classNames(
@@ -151,15 +148,8 @@ export class MessageBox extends React.PureComponent {
                                         { 'rce-mbox-time-block': thatAbsoluteTime },
                                         { 'non-copiable': !this.props.copiableDate },
                                     )}
-                                    data-text={this.props.copiableDate ? undefined : dateText}>
+                                    data-text={ dateText}>
                                     {
-                                        this.props.copiableDate &&
-                                        this.props.date &&
-                                        !isNaN(this.props.date) &&
-                                        (
-                                            this.props.dateString ||
-                                            format(this.props.date)
-                                        )
                                     }
                                     {
                                         this.props.status &&
@@ -308,15 +298,9 @@ export class MessageBox extends React.PureComponent {
                                         { 'rce-mbox-time-block': thatAbsoluteTime },
                                         { 'non-copiable': !this.props.copiableDate },
                                     )}
-                                    data-text={this.props.copiableDate ? undefined : dateText}>
+                                    data-text={ dateText}>
                                     {
-                                        this.props.copiableDate &&
-                                        this.props.date &&
-                                        !isNaN(this.props.date) &&
-                                        (
-                                            this.props.dateString ||
-                                            format(this.props.date)
-                                        )
+                                       
                                     }
                                     {
                                         this.props.status &&
