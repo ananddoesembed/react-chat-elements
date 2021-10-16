@@ -140,7 +140,7 @@ export class MessageBox extends React.PureComponent {
                                         }
                                         {
                                             this.props.title &&
-                                            <span style={{width:'100%'}}>{this.props.title}</span>
+                                            <span style={{width:'100%',overflowWrap:'break-all',maxWidth:"100%"}}>{this.props.title}</span>
                                         }
                                       {!this.props.below?<div style={{bottom:'-22px'}}
                                     className={classNames(
